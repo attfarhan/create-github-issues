@@ -2,7 +2,9 @@
 
 ## Overview
 
-This repository contains the scripts for an automated workflow that uses Devin to resolve cosmetic UI bugs in the [attfarhan/superset-auto](https://github.com/attfarhan/superset-auto) repository (a fork of [apache/superset](https://github.com/apache/superset)). The workflow is triggered by creating issues with the `bug:cosmetic` label in the `superset-auto` repository — the script in this repository handles that triggering step (see the [Trigger Workflow](#trigger-workflow) section below).
+This repository contains the scripts for an automated workflow that uses Devin to resolve cosmetic UI bugs in the [attfarhan/superset-auto](https://github.com/attfarhan/superset-auto) repository (a fork of [apache/superset](https://github.com/apache/superset)). The workflow is triggered by creating issues with the `bug:cosmetic` label in the `superset-auto` repository. 
+
+Running `docker compose up --build` in this repo handles that triggering step (see the [Trigger Workflow](#trigger-workflow) section below for full instructions) and kicks off the automation.
 
 The automation will read the issue containing a cosmetic UI bugs, and then start a Devin session and prompt the agent to fix the issue. The agent will then implement a fix, open a PR and include before/after screenshots of the bug in the description. Any iterations that the user wants Devin to make can be triggered by commenting feedback in the PR.
 
