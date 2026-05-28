@@ -6,7 +6,9 @@ This repository contains the scripts for an automated workflow that uses Devin t
 
 Running `docker compose up --build` in this repo handles that triggering step (see the [Trigger Workflow](#trigger-workflow) section below for full instructions) and kicks off the automation.
 
-The automation will read the issue containing a cosmetic UI bugs, and then start a Devin session and prompt the agent to fix the issue. The agent will then implement a fix, open a PR and include before/after screenshots of the bug in the description. Any iterations that the user wants Devin to make can be triggered by commenting feedback in the PR.
+The automation will read the issue containing a cosmetic UI bugs, and then start a Devin session and prompt the agent to fix the issue. The agent will then implement a fix, open a PR and include before/after screenshots of the bug in the description. Any iterations that the user wants Devin to make can be triggered by commenting feedback in the PR. 
+
+Devin will also post a comment in the original issue when the Devin session to resolve the bug has started (e.g. https://github.com/attfarhan/superset-auto/issues/84#issuecomment-4566083097) and post again when the PR is fixed (e.g. https://github.com/attfarhan/superset-auto/issues/84#issuecomment-4566325320).
 
 ## What's in this repo
 
