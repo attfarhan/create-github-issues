@@ -1,0 +1,8 @@
+services:
+  create-issues:
+    build: .
+    environment:
+      - GITHUB_TOKEN
+      - GITHUB_REPO=attfarhan/superset-auto
+    volumes:
+      - ../superset-auto/.github/issues:/issues:ro
