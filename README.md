@@ -5,7 +5,7 @@ Creates GitHub issues from Markdown files using Docker and the GitHub CLI.
 ## Prerequisites
 
 - Docker and Docker Compose
-- A GitHub personal access token with `repo` scope
+- A GitHub personal access token with `issue` scope, and BOTH `read` and `write` permissions
 
 ## Issue files
 
