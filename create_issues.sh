@@ -25,5 +25,6 @@ for file in "${files[@]}"; do
   gh issue create \
     --repo "$REPO" \
     --title "$title" \
-    --body "$body"
+    --body "$body" \
+    --label "bug:cosmetic"
 done
